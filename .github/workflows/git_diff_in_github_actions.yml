@@ -1,9 +1,9 @@
 name: git_diff_in_github_actions
 on:
   push:
-    branch: main
+    branches: main
   pull_request:
-    branch: main
+    branches: main
   workflow_dispatch:
 jobs:
   git_diff_in_github_actions:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: cat target.txt
-      - run: echo "New data\n" > target.txt
+      - run: echo "New data" > target.txt
       - run: cat target.txt
       - run: git branch
       - run: git status
