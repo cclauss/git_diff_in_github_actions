@@ -16,3 +16,8 @@ jobs:
       # - run: git branch
       # - run: git status
       - run: git diff
+  swiftlint_help:
+    runs-on: macos-latest
+    steps:
+      - run: swiftlint help
+      - run: swiftlint help lint
